@@ -1,6 +1,6 @@
 {
-  "name": "yoga-js",
-  "version": "0.0.0-development",
+  "name": "@logojoy/yoga-js",
+  "version": "0.0.2",
   "description": "Idiomatic JavaScript API for the Yoga layout engine",
   "author": "Vincent Riemer",
   "license": "MIT",
@@ -39,9 +39,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "clean:docs": "rimraf API.md",
-    "commit": "git-cz",
     "precommit": "yarn run build:docs",
-    "commitmsg": "conventional-changelog-lint -e",
     "flow": "flow",
     "prebuild:docs": "yarn run clean:docs",
     "build:docs": "documentation build src/index.js -f md -o API.md",
@@ -51,8 +49,7 @@
     "build:umd": "rollup -c config/rollup.umd.config.js",
     "build:flow": "flow gen-flow-files ./src/index.js > ./dist/yogajs.js.flow",
     "build": "npm-run-all build:{es,cjs,umd,flow}",
-    "prebuild": "yarn run clean",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "prebuild": "yarn run clean"
   },
   "repository": {
     "type": "git",
@@ -62,5 +59,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "yoga-layout": "^1.6.0"
   }
 }
