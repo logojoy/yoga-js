@@ -1,6 +1,6 @@
 {
   "name": "@logojoy/yoga-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Idiomatic JavaScript API for the Yoga layout engine",
   "author": "Vincent Riemer",
   "license": "MIT",
